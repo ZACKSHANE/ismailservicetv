@@ -1056,10 +1056,10 @@ h2 {
     display: inline-block;
   }
   .hero{
-    padding-top: 10rem;
+    padding-top: 20rem;
   }
   .navbar-top{
-    margin-top: 2rem;
+    margin-top: 8rem;
   }
   .navbar .navbar-nav {
     position: absolute;
