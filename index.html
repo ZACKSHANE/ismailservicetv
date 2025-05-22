@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISMAIL SERVICE</title>
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- feather icons  -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- mystyle -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- app -->
+      <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="navbar-top">
+      <div>
+        📞 +6281218594413 | ✉️ ismailservicetv@gmail.com | 🕒 Senin - Minggu  (09:00 - 18:00)
+      </div>
+    </div>
+
+   <!-- Navbar Start -->
+    <nav class="navbar" x-data>
+      <img src="img/LOGO ISMAIL SERVICE TV-02.png" alt="">
+      <a href="#" class="navbar-logo">ISMAIL<span>SERVICE</span></a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#product">Product</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+        </a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+
+      <!--  Search Form Start  -->
+        <div class="search-form">
+          <input type="search" id="search-box" placeholder="search here...">
+          <label for="search-box"><i data-feather="search"></i></label>
+        </div>
+        <!--  Search Form End  -->
+        
+        <!-- Shopping Cart start -->
+        <div class="shopping-cart">
+          <template x-for="(item, index) in $store.cart.items" x-key="index">
+          <div class="cart-item">
+            <img :src="`img/product/${item.image}`" :alt="item.name">
+            <div class="item-detail">
+               <h3 x-text="item.name"></h3>
+               <div class="item-price">
+                <span x-text="rupiah(item.price)"></span> &times;
+                <button  id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+                <span x-text="item.quantity"></span>
+                <button id="add"  @click="$store.cart.add(item)">&plus;</button>&equals;
+                <span x-text="item.total"></span>
+               </div>
+              </div>
+            </div>
+            </template>
+            <h4 x-show="!$store.cart.items.length">Cart is Empty</h4>
+            <h4 x-show="!$store.cart.item.length">Total <span x-text="rupiah($store.cart.total)"></span></h4>
+            </div>
+            <!-- Shopping Cart end -->
+            
+          </nav>
+     <!-- Navbar  end -->
+
+    <!-- Hero Section Start -->
+    <section class="hero" id="home">
+      <div class="content">
+        <h1>JASA SERVICE TV PANGGILAN JAKARTA <br />ISMAIL SERVICE TV</h1>
+        <h2>➣LED ➣LCD ➣PLASMA ➣REPAIR SPESIALIS</h2>
+        <p>
+          TV Anda Bermasalah ?
+          <span> Cek Dan Ketahui Problem Kerusakan TV anda Sekarang</span>
+        </p>
+        <div class="cta">
+  <a href="https://wa.me/6281332777916?text=Halo%20selamat%20datang%20di%20Ismail%20Service%20TV%20Panggilan%20Jakarta.%20Ada%20yang%20bisa%20kami%20bantu%20atau%20ingin%20berkonsultasi%20terlebih%20dahulu%3F" 
+     target="_blank">
+    Konsultasi Sekarang
+  </a>
+</div>
+
+      </div>
+      <div class="hero-img">
+        <img src="img/1123.jpeg" alt="Teknisi Ismail Service" />
+      </div>
+    </section>
+    <!-- Hero Section End -->
+    <!-- about section start(highlight) -->
+    <section class="about" id="about">
+      <h2>Tentang Kami</h2>
+      <div class="about-highlights">
+        <div class="highlight-box">
+          <img src="img/television.png" alt="" />
+          <h3>Servis Elektronik Terbaik</h3>
+          <p>
+            Kami memberikan pelayanan terbaik dan terpercaya untuk semua
+            kebutuhan perbaikan Anda.
+          </p>
+        </div>
+        <div class="highlight-box">
+          <img src="img/mechanic.png" alt="" />
+          <h3>Tim Berpengalaman</h3>
+          <p>
+            Teknisi kami memiliki pengalaman bertahun-tahun dan keahlian di
+            bidangnya.
+          </p>
+        </div>
+        <div class="highlight-box">
+          <img src="img/shield.png" alt="" />
+          <h3>Layanan Aman & Terjamin</h3>
+          <p>
+            Keamanan perangkat Anda menjadi prioritas utama kami selama proses
+            perbaikan.
+          </p>
+        </div>
+      </div>
+      <!-- about section end (highlight) -->
+
+      <!-- about section start one -->
+      <div class="about-container" id="">
+        <div class="about-image">
+          <img src="img/wawa.jpg" alt="Teknisi Servis" />
+          <div class="experience">25+<span>Tahun Pengalaman</span></div>
+        </div>
+        <div class="about-text">
+          <h2>Kami Menyediakan Layanan Perbaikan Berkualitas</h2>
+          <p>
+            ISMAIL SERVICE adalah layanan perbaikan komputer dan ponsel
+            terpercaya dengan pengalaman lebih dari 25 tahun. Kami berkomitmen
+            memberikan hasil terbaik dengan harga yang kompetitif dan pelayanan
+            profesional.
+          </p>
+          <div class="features">
+            <div class="row1">
+              <img
+                src="img/money-bag.png"
+                alt="Harga Terjangkau"
+                class="feature-i"
+              />
+              <div class="feature-item">
+                <h4>Harga Terjangkau</h4>
+                <p>
+                  Kami memahami bahwa biaya perbaikan sering menjadi
+                  kekhawatiran utama pelanggan. Oleh karena itu, ISMAIL SERVICE
+                  hadir dengan komitmen untuk memberikan layanan terbaik dengan
+                  harga yang transparan dan terjangkau. Tanpa biaya tersembunyi
+                </p>
+              </div>
+            </div>
+            <div class="row2">
+              <img src="img/trust.png" alt="" />
+              <div class="feature-item">
+                <h4>Layanan Terpercaya</h4>
+                <p>
+                  Kepercayaan pelanggan adalah prioritas utama kami. <br />
+                  Dengan tim teknisi berpengalaman dan peralatan modern, ISMAIL
+                  SERVICE menjamin proses perbaikan yang transparan, cepat, dan
+                  tepat. Kami selalu memberikan informasi jelas mengenai
+                  kerusakan dan biaya, serta memastikan setiap perangkat kembali
+                  berfungsi optimal sebelum diserahkan kembali kepada Anda.
+                </p>
+              </div>
+            </div>
+
+            <div class="row3">
+              <img src="img/garansibg.png" alt="" />
+              <div class="feature-item">
+                <h4>TerJamin Dan BerGaransi</h4>
+                <p>
+                  Kami percaya pada kualitas layanan kami. Oleh karena itu,
+                  setiap perbaikan yang dilakukan di ISMAIL SERVICE dilengkapi
+                  dengan garansi 3 bulan. Jika terjadi kerusakan yang sama dalam
+                  masa garansi, Anda berhak mendapatkan layanan ulang tanpa
+                  biaya tambahan. Kepuasan dan kepercayaan Anda adalah komitmen
+                  kami.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about section end -->
+
+    <!-- layanin section start -->
+    <section class="services-section" id="layanan">
+      <div class="container">
+        <div class="services-row">
+          <!-- KIRI: Judul & Deskripsi -->
+          <div class="services-left">
+            <h2 class="section-title">
+              Layanan
+              <span>
+                <br />
+                ISMAIL SERVICE</span
+              >
+            </h2>
+            <p class="section-subtitle">
+              ISMAIL SERVICE adalah solusi terpercaya untuk semua permasalahan
+              TV Anda — mulai dari kerusakan ringan hingga berat. Kami melayani
+              servis panggilan ke rumah untuk perbaikan berbagai jenis dan merek
+              TV seperti LED, LCD, dan Plasma. Dengan dukungan teknisi
+              berpengalaman dan profesional, kami siap menangani masalah seperti
+              layar gelap, suara hilang, gambar tidak muncul, hingga kerusakan
+              akibat petir. Nikmati kemudahan layanan cepat, aman, dan
+              bergaransi langsung di rumah Anda tanpa perlu repot membawa TV ke
+              tempat servis!
+            </p>
+            <img src="img/service.jpg" alt="" />
+            <img src="img/repair.jpg" alt="" />
+          </div>
+
+          <!-- KANAN: Kartu-kartu layanan -->
+          <div class="services-right">
+            <div class="service-card">
+              <div class="icon">
+                <img src="img/television.png" alt="" />
+              </div>
+              <h3>Melayani Perbaikan Berbagai Jenis TV LCD LED & PLASMA</h3>
+              <ul>
+                <p>Layar gelap / tidak menyala ✔️</p>
+                <p>Garis-garis pada layar ✔️</p>
+                <p>TV hanya suara tanpa gambar✔️</p>
+                <p>TV mati total✔️</p>
+                <p>Gambar pecah / buram✔️</p>
+                <p>Remote tidak berfungsi✔️</p>
+                <p>Kena petir✔️</p>
+                <p>Suka mati hidup kembali✔️</p>
+                <p>Stand by indicator kedap-kedip✔️</p>
+                <p>LCD panel pecah✔️</p>
+                <p>Gambar tidak ada✔️</p>
+                <p>Suara tidak ada✔️</p>
+                <p>Gambar setengah✔️</p>
+              </ul>
+            </div>
+
+            <div class="service-card">
+              <div class="icon">
+                <img src="img/tv.png" alt="" />
+              </div>
+              <h3>Jenis TV Yang Dilayani</h3>
+              <ul>
+                <p>TV LED ✔️</p>
+                <p>TV LCD ✔️</p>
+                <p>TV PLASMA✔️</p>
+                <p>TV QLED✔️</p>
+                <p>TV QLED✔️</p>
+                <p>TV ANDROID✔️</p>
+                <p>TV GOOGLE✔️</p>
+                <p>TV SMART✔️</p>
+                <p>TV TABUNG (Terbatas)✔️</p>
+              </ul>
+            </div>
+
+            <div class="service-card">
+              <div class="icon">
+                <img src="img/pin.png" alt="" />
+              </div>
+              <h3>Lokasi Yang Dikunjungi</h3>
+              <ul>
+                <p>Harapan Indah ✔️</p>
+                <p>Kalimang ✔️</p>
+                <p>PondokGede✔️</p>
+                <p>Pondok Bambu✔️</p>
+                <p>Pondok Kelapa✔️</p>
+                <p>JatiNegara✔️</p>
+                <p>Matraman✔️</p>
+                <p>Cempaka Putih✔️</p>
+                <p>Mangga Dua✔️</p>
+                <p>Pasar Senen✔️</p>
+                <p>Menteng✔️</p>
+                <p>Tebet✔️</p>
+                <p>Tanah Abang✔️</p>
+                <p>Pancoran✔️</p>
+                <p>Pasar Minggu✔️</p>
+              </ul>
+            </div>
+
+            <!-- Tambahkan kartu lainnya di sini -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section start -->
+    <section class="product" id="product" x-data="product">
+      <div class="container">
+        <div class="services-row">
+          <!-- Kiri -->
+          <div class="services-left">
+            <h2 class="section-title">
+              <span>Produk Original dan</span> Berkualitas
+            </h2>
+            <p class="section-subtitle">
+              Semua produk yang kami jual dilengkapi dengan garansi, karena
+              kepuasan dan kenyamanan Anda adalah prioritas kami. Jika produk
+              tidak sesuai atau mengalami masalah, tim kami siap membantu proses
+              penukaran atau penggantian dengan cepat dan mudah. Belanja tanpa
+              ragu, karena kami hadir untuk memberikan layanan terbaik.
+            </p>
+            <img src="img/oriiii.png" alt="" />
+          </div>
+
+          <!-- Kanan (Produk Card Grid) -->
+<div class="services-right" x-data="{
+  items: [
+    { name: 'Remote TV', image: 'remote.jpg', price: 75000 },
+    { name: 'Bracket TV LED LCD 45 Derajat', image: 'Bracket1.jpg', price:500000},
+    { name: 'Bracket TV Ukuran 32- 50 Inch', image: 'Bracket2.jpg', price:150000}
+  ],
+  
+  rupiah(number) {
+    return new Intl.NumberFormat('id-ID', {
+      style: 'currency',
+      currency: 'IDR',
+      minimumFractionDigits: 0
+    }).format(number);
+  }
+}">
+
+  <template x-for="(item, index) in items" :key="index">
+    <div class="product-card">
+      <div class="product-icons">
+        <a href="#" @click.prevent="$store.cart.add(item)">
+                <svg
+        width="24"
+        height="24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+>
+        <use href="img/feather-sprite.svg#shopping-cart" />
+</svg>
+        </a>
+        <a href="#" class="item-detail-button"><svg
+  width="24"
+  height="24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <use href="img/feather-sprite.svg#eye" />
+</svg></a>
+      </div>
+      <div class="product-image">
+        <img :src="`img/product/${item.image}`" :alt="item.name" />
+      </div>
+      <div class="product-content">
+        <h3 x-text="item.name"></h3>
+        <div class="product-stars">
+         <svg
+              width="24"
+              height="24"
+              fill="currentfull"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <use href="img/feather-sprite.svg#star" />
+            </svg>
+         <svg
+              width="24"
+              height="24"
+              fill="currentfull"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <use href="img/feather-sprite.svg#star" />
+            </svg>
+         <svg
+              width="24"
+              height="24"
+              fill="currentfull"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <use href="img/feather-sprite.svg#star" />
+            </svg>
+         <svg
+              width="24"
+              height="24"
+              fill="currentfull"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <use href="img/feather-sprite.svg#star" />
+            </svg>
+         <svg
+              width="24"
+              height="24"
+              fill="currentfull"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <use href="img/feather-sprite.svg#star" />
+            </svg>
+        </div>
+        <div class="product-price" ><span x-text="rupiah(item.price)"></span></div>
+      </div>
+    </div>
+  </template>
+</div>
+        </div>
+      </div>
+    </section>
+    <!-- Products Section end -->
+
+    <section id="contact" class="contact">
+      <h2>Kontak Kami</h2>
+      <p>
+        Silakan hubungi kami jika Anda memiliki pertanyaan atau membutuhkan
+        bantuan layanan TV Anda.
+      </p>
+
+      <div class="contact-wrapper">
+        <!-- Info Kontak -->
+        <div class="contact-info">
+          <div class="info-box">
+            <div class="icon-circle">
+              <i data-feather="map-pin"></i>
+            </div>
+            <div class="info-text">
+              <h4>Office Address</h4>
+              <p>Jl. H. Naman No.123, Pondok Kelapa, Jakarta Timur</p>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="icon-circle">
+              <i data-feather="phone"></i>
+            </div>
+            <div class="info-text">
+              <h4>Call Us</h4>
+              <p> +6281218594413</p>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="icon-circle">
+              <i data-feather="mail"></i>
+            </div>
+            <div class="info-text">
+              <h4>Email Us</h4>
+              <p>ismailservicetv@gmail.com</p>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="icon-circle">
+              <i data-feather="clock"></i>
+            </div>
+            <div class="info-text">
+              <h4>Open Time</h4>
+              <p>Senin - Minggu (09.00 - 18.00)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulir -->
+        <div class="contact-form">
+          <form action="">
+            <div class="input-group">
+              <input type="text" placeholder="Nama Anda" required />
+            </div>
+            <div class="input-group">
+              <input type="email" placeholder="Email Anda" required />
+            </div>
+            <div class="input-group">
+              <input type="text" placeholder="No HP" required />
+            </div>
+            <div class="input-group">
+              <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Google Maps -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3966.366485170836!2d106.946306!3d-6.215305!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698c9d23a8be23%3A0x86bf2fa066d63035!2sIsmail%20Service%20TV%20LED%20Sepesialis%20Panggilan%20jakarta%20bekasi%20bergaransi!5e0!3m2!1sid!2sid!4v1747746190229!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Footer Start -->
+    <footer class="reparo-footer">
+      <div class="footer-container">
+        <!-- Kolom 1: Logo & Info -->
+        <div class="footer-column">
+          <h3 class="footer-logo">ISMAIL SERVICE</h3>
+          <p>
+            Kami melayani perbaikan TV LED & LCD panggilan ke rumah, bergaransi
+            dan terpercaya.
+          </p>
+          <ul class="footer-contact">
+            <li><i data-feather="phone"></i> +62 812 3456 7890</li>
+            <li>
+              <i data-feather="map-pin"></i> Jl. Sentra Primer Tim. Jl. Baru I No.22B, RT.3/RW.8, Pulo Gebang, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13950
+            </li>
+            <li><i data-feather="mail"></i> info@ismailservice.com</li>
+          </ul>
+        </div>
+
+        <!-- Kolom 2: Quick Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Services -->
+        <div class="footer-column">
+          <h4>Layanan Services</h4>
+          <ul>
+            <li><a href="#">TV LED Repair</a></li>
+            <li><a href="#">LCD Panel Ganti</a></li>
+            <li><a href="#">Power Supply Repair</a></li>
+            <li><a href="#">Remote Control Service</a></li>
+            <li><a href="#">Service Panggilan</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="https://www.facebook.com/servicetvlcdledpanggilan?_rdc=1&_rdr#"><i data-feather="facebook"></i></a>
+          <a href="https://x.com/ismailservistv?t=Buu0RvhUguke6aF7ifjW-g&s=09"><i data-feather="twitter"></i></a>
+          <a href="https://www.instagram.com/accounts/login/?next=%2Fismailservice%2F&source=omni_redirect"><i data-feather="instagram"></i></a>
+          <a href="https://youtube.com/@ismailservicetvled?si=72-piGfEQ9NCY0CJ"><i data-feather="youtube"></i></a>
+        </div>
+        <p>
+          © Copyright 2025 <span class="brand">ISMAIL SERVICE</span>. All Rights
+          Reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+     <!-- Modal Box Item Start-->
+        <div class="modal" id="item-detail-modal">
+          <div class="modal-container">
+            <a href="#" class="close-icon"><i data-feather="x"></i></a>
+            <div class="modal-content">
+              <img src="img/remote.jpg" alt="product 1">
+              <div class="product-content">
+                <h3>Product 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, in velit consequatur porro architecto aliquam mollitia aperiam. At quia reiciendis quisquam consequuntur, maxime debitis nemo.</p>
+                  <div class="product-stars">
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+          </div>
+          <div class="product-price">IDR 100k <span>IDR 55K</span></div>
+          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- Modal Box Item End-->
+    <a
+  href="https://wa.me/6281218594413?text=Nama%20%3A%0AAlamat%3A%0AMerk%20TV%3A%0ANomor%20TV%3A%0AKeluhannya%3A%0AFoto%20TV%3A"
+  class="wa-float"
+  target="_blank"
+  aria-label="Chat via WhatsApp"
+>
+  <img src="img/wa.jpg" alt="WhatsApp" />
+</a>
+
+    <!-- father icon -->
+    <script>
+      feather.replace();
+    </script>
+    <!-- java script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
