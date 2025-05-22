@@ -1058,6 +1058,9 @@ h2 {
   .hero{
     padding-top: 10rem;
   }
+  .navbar-top{
+    margin-top: 2rem;
+  }
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
