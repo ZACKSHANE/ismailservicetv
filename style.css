@@ -1097,6 +1097,10 @@ h2 {
   .hero img {
     width: 80%;
   }
+
+  .about img{
+    width: 6rem;
+  }
   
   .about-container {
     flex-direction: column;
@@ -1124,7 +1128,7 @@ h2 {
 }
 
 /* Mobile (≤ 600px) */
-@media (max-width: 450px) {
+@media (max-width: 398px) {
   html {
     font-size: 55%;
   }
