@@ -1148,11 +1148,11 @@ h2 {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding-top: 10rem;
+    padding-top: 20rem;
   }
 
   .navbar-top{
-    margin-top: 5rem;
+    margin-top: 9rem;
   }
 
   .hero .content h1,
