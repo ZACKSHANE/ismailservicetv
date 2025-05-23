@@ -1152,7 +1152,7 @@ h2 {
   }
 
   .navbar-top{
-    margin-top: 9rem;
+    margin-top: 5rem;
   }
 
   .hero .content h1,
@@ -1185,6 +1185,12 @@ h2 {
   .product .services-left,
   .product .services-right {
     width: 100%;
+  }
+
+  .service-card{
+    display: flex;
+    text-align: center;
+    margin-left: 5rem
   }
 
   .highlight-box p {

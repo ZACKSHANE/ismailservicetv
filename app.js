@@ -3,7 +3,7 @@ document.addEventListener("alpine:init", () => {
     items: [
       { id: 1, name: "Remote", image: "product/remote.jpg", price: 100000 },
       { id: 2, name: "Bracket x", image: "product/bracket1.jpg", price: 300000 },
-      { id: 3, name: "Bracket y", image: "product/bracket2.jpg", price: 400000 },
+      { id: 3, name: "Bracket y", image: "product/stand2.jpg", price: 400000 },
     ],
   }));
 
