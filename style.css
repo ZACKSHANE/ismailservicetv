@@ -1152,7 +1152,7 @@ h2 {
   }
 
   .navbar-top{
-    margin-top: 5rem;
+    margin-top: 7rem;
   }
 
   .hero .content h1,
@@ -1188,9 +1188,10 @@ h2 {
   }
 
   .service-card{
-    display: flex;
-    text-align: center;
-    margin-left: 5rem
+    margin-left: 6rem
+  }
+  .map-container{
+    margin-top: 3rem;
   }
 
   .highlight-box p {
