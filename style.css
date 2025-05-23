@@ -1047,7 +1047,7 @@ h2 {
 }
 
 /* Tablet (601px – 1024px) */
-@media (max-width: 976px) {
+@media (max-width: 768px) {
   html {
     font-size: 62.5%;
   }
@@ -1056,7 +1056,7 @@ h2 {
     display: inline-block;
   }
   .hero{
-    padding-top: 5rem;
+    padding-top: 10rem;
   }
   .navbar-top{
     margin-top: 2rem;
@@ -1148,7 +1148,11 @@ h2 {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 2rem 1rem;
+    padding-top: 5rem;
+  }
+
+  .navbar-top{
+    margin-top: 2rem;
   }
 
   .hero .content h1,
