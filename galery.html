@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galeri Foto</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+
+<!-- feather icons  -->
+    <script src="https://unpkg.com/feather-icons"></script>
+<body>
+
+     <div class="navbar-top">
+      <div>
+        📞 +6281218594413 | ✉️ ismailservicetv@gmail.com | 🕒 Senin - Minggu
+        (09:00 - 18:00)
+      </div>
+    </div>
+
+    <!-- Navbar Start -->
+    <nav class="navbar" x-data>
+      <img src="img/LOGO ISMAIL SERVICE TV-02.png" alt="" />
+      <a href="#" class="navbar-logo">ISMAIL<span>SERVICE</span></a>
+
+      <div class="navbar-nav">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">Tentang Kami</a>
+        <a href="index.html#layanan">Layanan</a>
+        <a href="index.html#product">Product</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Gallery ▼</a>
+          <div class="dropdown-content">
+            <a href="galery.html">Kerusakan</a>
+            <a href="vidio.html">Repair Video</a>
+          </div>
+          <a href="index.html#reviews">Review</a>
+          <a href="index.html#contact">Contact</a>
+  </div>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart-button"
+          ><i data-feather="shopping-cart"></i>
+          <span
+            class="quantity-badge"
+            x-show="$store.cart.quantity"
+            x-text="$store.cart.quantity"
+          ></span>
+        </a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+
+      <!--  Search Form Start  -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!--  Search Form End  -->
+    </nav>
+      </div>
+        <!-- hero section start -->
+      <section class="hero" id="home">
+      <div class="content">
+        <h1>JASA SERVICE TV PANGGILAN JAKARTA <br />ISMAIL SERVICE TV</h1>
+        <h2>➣LED ➣LCD ➣PLASMA ➣REPAIR SPESIALIS</h2>
+        <p>
+          TV Anda Bermasalah ?
+          <span> Cek Dan Ketahui Problem Kerusakan TV anda Sekarang</span>
+        </p>
+        <div class="cta">
+          <a
+            href="https://wa.me/6281332777916?text=Halo%20selamat%20datang%20di%20Ismail%20Service%20TV%20Panggilan%20Jakarta.%20Ada%20yang%20bisa%20kami%20bantu%20atau%20ingin%20berkonsultasi%20terlebih%20dahulu%3F"
+            target="_blank"
+          >
+            Konsultasi Sekarang
+          </a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="img galerry/hero  galery.jpeg" alt="Teknisi Ismail Service" />
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <section class="galery">
+    <h1>Galeri Foto</h1>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="img galerry/gambar setnagh.png" alt="Foto 1" />
+      <div class="caption">Foto 1</div>
+    </div>
+    <div class="gallery-item">
+      <img src="img galerry/images (1).jpg" alt="Foto 2" />
+      <div class="caption">Foto 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="img galerry/images.jpg" alt="Foto 3" />
+      <div class="caption">Foto 3</div>
+    </div>
+    <div class="gallery-item">
+      <img src="img galerry/tv garis.jpg" alt="Foto 4" />
+      <div class="caption">Foto 4</div>
+    </div>
+    <div class="gallery-item">
+      <img src="img galerry/service.jpg" alt="Foto 5" />
+      <div class="caption">Foto 5</div>
+    </div>
+    <div class="gallery-item">
+      <img src="img galerry/wawa.jpg" alt="Foto 6" />
+      <div class="caption">Foto 6</div>
+    </div>
+  </div>
+  </section>
+
+   <!-- Footer Start -->
+    <footer class="reparo-footer">
+      <div class="footer-container">
+        <!-- Kolom 1: Logo & Info -->
+        <div class="footer-column">
+          <h3 class="footer-logo">ISMAIL SERVICE</h3>
+          <p>
+            Kami melayani perbaikan TV LED & LCD panggilan ke rumah, bergaransi
+            dan terpercaya.
+          </p>
+          <ul class="footer-contact">
+            <li><i data-feather="phone"></i> +62 812 3456 7890</li>
+            <li>
+              <i data-feather="map-pin"></i> Jl. Sentra Primer Tim. Jl. Baru I
+              No.22B, RT.3/RW.8, Pulo Gebang, Kec. Cakung, Kota Jakarta Timur,
+              Daerah Khusus Ibukota Jakarta 13950
+            </li>
+            <li><i data-feather="mail"></i> info@ismailservice.com</li>
+          </ul>
+        </div>
+
+        <!-- Kolom 2: Quick Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Services -->
+        <div class="footer-column">
+          <h4>Layanan Services</h4>
+          <ul>
+            <li><a href="#">TV LED Repair</a></li>
+            <li><a href="#">LCD Panel Ganti</a></li>
+            <li><a href="#">Power Supply Repair</a></li>
+            <li><a href="#">Remote Control Service</a></li>
+            <li><a href="#">Service Panggilan</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a
+            href="https://www.facebook.com/servicetvlcdledpanggilan?_rdc=1&_rdr#"
+            ><i data-feather="facebook"></i
+          ></a>
+          <a href="https://x.com/ismailservistv?t=Buu0RvhUguke6aF7ifjW-g&s=09"
+            ><i data-feather="twitter"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/accounts/login/?next=%2Fismailservice%2F&source=omni_redirect"
+            ><i data-feather="instagram"></i
+          ></a>
+          <a href="https://youtube.com/@ismailservicetvled?si=72-piGfEQ9NCY0CJ"
+            ><i data-feather="youtube"></i
+          ></a>
+        </div>
+        <p>
+          © Copyright 2025 <span class="brand">ISMAIL SERVICE</span>. All Rights
+          Reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+  <!-- father icon -->
+    <script>
+      feather.replace();
+    </script>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>

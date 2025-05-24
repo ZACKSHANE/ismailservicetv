@@ -9,6 +9,7 @@
 
 
 body {
+  max-width: 100%;
   font-family: "poppins",sans-serif;
 }
 .navbar-top {
@@ -50,7 +51,7 @@ body {
 }
 
 .navbar .navbar-logo {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #0c0808;
   font-style: italic;
@@ -130,6 +131,49 @@ padding: 1rem;
   color: #00888b;
 }
 /* navbar end */
+
+/* dropdown galery start */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 100px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 1px 10px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Perbaikan bagian ini supaya tidak mengubah background */
+.dropdown:hover .dropbtn {
+  /* Hapus background-color atau set jadi transparent agar background tidak berubah */
+  background-color: transparent;
+  color: #ffd700; /* Contoh warna tulisan menyala saat hover */
+  transition: color 0.3s ease;
+}
+
+
+
+/* dropdown galery end */
 
 /* Navbar Search Form */
 .search-form {
@@ -684,7 +728,6 @@ h2 {
   gap: 50px;
   align-items: flex-start;
 }
-
 .product .services-left {
   flex: 1;
   min-width: 280px;
@@ -765,6 +808,7 @@ h2 {
   background: #f9f9f9;
 }
 .contact h2, p{
+  text-align: center;
   color: #444;
   padding-left: 1rem;
 }
@@ -843,6 +887,7 @@ h2 {
 
 .map-container {
   margin-top: 30px;
+  margin-left: 2rem;
 }
 
 .map-container iframe {
@@ -851,6 +896,117 @@ h2 {
   border: none;
   border-radius: 10px;
 }
+
+
+.reviews {
+  background-color: #f7f7f7;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.review-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-card p {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.review-card h4 {
+  color: #111;
+  font-weight: bold;
+}
+
+/* review sectio start */
+.gallery-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #002c3e;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.gallery-choices {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.gallery-button {
+  background-color: #00b5b7;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.gallery-button:hover {
+  background-color: #00888b;
+}
+
+.gallery-container {
+  margin-bottom: 60px;
+}
+
+.gallery-container h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00b5b7;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.gallery-grid img,
+.gallery-grid iframe {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+/* review sectio endt */
+
 
 /* Footer Umum */
 .reparo-footer {
@@ -877,11 +1033,14 @@ h2 {
 .footer-column p,
 .footer-column li,
 .footer-column a {
+  text-align: left;
+  padding-right: 3rem;
   font-size: 14px;
   color: #ccc;
   line-height: 1.8;
   text-decoration: none;
 }
+
 
 .footer-column a:hover {
   color: #fff;
@@ -931,6 +1090,9 @@ h2 {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.6);
 
+}
+.modal .show{
+  display: flex;
 }
 
 .modal-container{
@@ -1051,12 +1213,19 @@ h2 {
   html {
     font-size: 62.5%;
   }
-
+  
   #hamburger-menu {
     display: inline-block;
   }
+    .dropdown-content {
+  display: none;
+  position: absolute;
+   top: 0;
+  left: 100%;
+    }
   .hero{
     padding-top: 10rem;
+
   }
   .navbar-top{
     margin-top: 2rem;
@@ -1127,6 +1296,7 @@ h2 {
   }
 }
 
+
 /* Mobile (≤ 600px) */
 @media (max-width: 398px) {
   html {
@@ -1191,7 +1361,7 @@ h2 {
     margin-left: 6rem
   }
   .map-container{
-    margin-top: 3rem;
+    margin-left: 3rem;
   }
 
   .highlight-box p {

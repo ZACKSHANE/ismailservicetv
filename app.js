@@ -7,6 +7,21 @@ document.addEventListener("alpine:init", () => {
     ],
   }));
 
+  Alpine.store("modal", {
+  selectedItem: null,
+
+  open(item) {
+    this.selectedItem = item;
+    document.querySelector("#item-detail-modal").classList.add("show");
+  },
+
+  close() {
+    this.selectedItem = null;
+    document.querySelector("#item-detail-modal").classList.remove("show");
+  },
+});
+
+
   Alpine.store("cart", {
     items: [],
     total: 0,

@@ -18,20 +18,24 @@
     <!-- mystyle -->
     <link rel="stylesheet" href="style.css" />
     <!-- alpine.js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
     <!-- app -->
-      <script src="app.js"></script>
+    <script src="app.js"></script>
   </head>
   <body>
     <div class="navbar-top">
       <div>
-        📞 +6281218594413 | ✉️ ismailservicetv@gmail.com | 🕒 Senin - Minggu  (09:00 - 18:00)
+        📞 +6281218594413 | ✉️ ismailservicetv@gmail.com | 🕒 Senin - Minggu
+        (09:00 - 18:00)
       </div>
     </div>
 
-   <!-- Navbar Start -->
+    <!-- Navbar Start -->
     <nav class="navbar" x-data>
-      <img src="img/LOGO ISMAIL SERVICE TV-02.png" alt="">
+      <img src="img/LOGO ISMAIL SERVICE TV-02.png" alt="" />
       <a href="#" class="navbar-logo">ISMAIL<span>SERVICE</span></a>
 
       <div class="navbar-nav">
@@ -39,48 +43,65 @@
         <a href="#about">Tentang Kami</a>
         <a href="#layanan">Layanan</a>
         <a href="#product">Product</a>
-        <a href="#contact">Contact</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Gallery ▼</a>
+          <div class="dropdown-content">
+            <a href="galery.html">Kerusakan</a>
+            <a href="vidio.html">Repair Video</a>
+          </div>
+          <a href="#contact">Contact</a>
+          <a href="#reviews">Review</a>
+        </div>
       </div>
 
       <div class="navbar-extra">
         <a href="#" id="search-button"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i>
-        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+        <a href="#" id="shopping-cart-button"
+          ><i data-feather="shopping-cart"></i>
+          <span
+            class="quantity-badge"
+            x-show="$store.cart.quantity"
+            x-text="$store.cart.quantity"
+          ></span>
         </a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
 
       <!--  Search Form Start  -->
-        <div class="search-form">
-          <input type="search" id="search-box" placeholder="search here...">
-          <label for="search-box"><i data-feather="search"></i></label>
-        </div>
-        <!--  Search Form End  -->
-        
-        <!-- Shopping Cart start -->
-        <div class="shopping-cart">
-          <template x-for="(item, index) in $store.cart.items" x-key="index">
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!--  Search Form End  -->
+
+      <!-- Shopping Cart start -->
+      <div class="shopping-cart">
+        <template x-for="(item, index) in $store.cart.items" x-key="index">
           <div class="cart-item">
-            <img :src="`img/product/${item.image}`" :alt="item.name">
+            <img :src="`img/product/${item.image}`" :alt="item.name" />
             <div class="item-detail">
-               <h3 x-text="item.name"></h3>
-               <div class="item-price">
+              <h3 x-text="item.name"></h3>
+              <div class="item-price">
                 <span x-text="rupiah(item.price)"></span> &times;
-                <button  id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+                <button id="remove" @click="$store.cart.remove(item.id)">
+                  &minus;
+                </button>
                 <span x-text="item.quantity"></span>
-                <button id="add"  @click="$store.cart.add(item)">&plus;</button>&equals;
+                <button id="add" @click="$store.cart.add(item)">&plus;</button
+                >&equals;
                 <span x-text="item.total"></span>
-               </div>
               </div>
             </div>
-            </template>
-            <h4 x-show="!$store.cart.items.length">Cart is Empty</h4>
-            <h4 x-show="!$store.cart.item.length">Total <span x-text="rupiah($store.cart.total)"></span></h4>
-            </div>
-            <!-- Shopping Cart end -->
-            
-          </nav>
-     <!-- Navbar  end -->
+          </div>
+        </template>
+        <h4 x-show="!$store.cart.items.length">Cart is Empty</h4>
+        <h4 x-show="!$store.cart.item.length">
+          Total <span x-text="rupiah($store.cart.total)"></span>
+        </h4>
+      </div>
+      <!-- Shopping Cart end -->
+    </nav>
+    <!-- Navbar  end -->
 
     <!-- Hero Section Start -->
     <section class="hero" id="home">
@@ -92,12 +113,13 @@
           <span> Cek Dan Ketahui Problem Kerusakan TV anda Sekarang</span>
         </p>
         <div class="cta">
-  <a href="https://wa.me/6281332777916?text=Halo%20selamat%20datang%20di%20Ismail%20Service%20TV%20Panggilan%20Jakarta.%20Ada%20yang%20bisa%20kami%20bantu%20atau%20ingin%20berkonsultasi%20terlebih%20dahulu%3F" 
-     target="_blank">
-    Konsultasi Sekarang
-  </a>
-</div>
-
+          <a
+            href="https://wa.me/6281332777916?text=Halo%20selamat%20datang%20di%20Ismail%20Service%20TV%20Panggilan%20Jakarta.%20Ada%20yang%20bisa%20kami%20bantu%20atau%20ingin%20berkonsultasi%20terlebih%20dahulu%3F"
+            target="_blank"
+          >
+            Konsultasi Sekarang
+          </a>
+        </div>
       </div>
       <div class="hero-img">
         <img src="img/1123.jpeg" alt="Teknisi Ismail Service" />
@@ -321,7 +343,9 @@
           </div>
 
           <!-- Kanan (Produk Card Grid) -->
-<div class="services-right" x-data="{
+          <div
+            class="services-right"
+            x-data="{
   items: [
     { name: 'Remote TV', image: 'remote.jpg', price: 75000 },
     { name: 'Bracket TV LED LCD 45 Derajat', image: 'bracket1.jpg', price:500000},
@@ -335,103 +359,106 @@
       minimumFractionDigits: 0
     }).format(number);
   }
-}">
-
-  <template x-for="(item, index) in items" :key="index">
-    <div class="product-card">
-      <div class="product-icons">
-        <a href="#" @click.prevent="$store.cart.add(item)">
-                <svg
-        width="24"
-        height="24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
->
-        <use href="img/feather-sprite.svg#shopping-cart" />
-</svg>
-        </a>
-        <a href="#" class="item-detail-button"><svg
-  width="24"
-  height="24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <use href="img/feather-sprite.svg#eye" />
-</svg></a>
-      </div>
-      <div class="product-image">
-        <img :src="`img/product/${item.image}`" :alt="item.name" />
-      </div>
-      <div class="product-content">
-        <h3 x-text="item.name"></h3>
-        <div class="product-stars">
-         <svg
-              width="24"
-              height="24"
-              fill="currentfull"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <use href="img/feather-sprite.svg#star" />
-            </svg>
-         <svg
-              width="24"
-              height="24"
-              fill="currentfull"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <use href="img/feather-sprite.svg#star" />
-            </svg>
-         <svg
-              width="24"
-              height="24"
-              fill="currentfull"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <use href="img/feather-sprite.svg#star" />
-            </svg>
-         <svg
-              width="24"
-              height="24"
-              fill="currentfull"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <use href="img/feather-sprite.svg#star" />
-            </svg>
-         <svg
-              width="24"
-              height="24"
-              fill="currentfull"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <use href="img/feather-sprite.svg#star" />
-            </svg>
-        </div>
-        <div class="product-price" ><span x-text="rupiah(item.price)"></span></div>
-      </div>
-    </div>
-  </template>
-</div>
+}"
+          >
+            <template x-for="(item, index) in items" :key="index">
+              <div class="product-card">
+                <div class="product-icons">
+                  <a href="#" @click.prevent="$store.cart.add(item)">
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <use href="img/feather-sprite.svg#shopping-cart" />
+                    </svg>
+                  </a>
+                  <a href="#" class="item-detail-button"@click.prevent="$store.modal.open(item)"
+                    ><svg
+                      width="24"
+                      height="24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <use href="img/feather-sprite.svg#eye" /></svg
+                  ></a>
+                </div>
+                <div class="product-image">
+                  <img :src="`img/product/${item.image}`" :alt="item.name" />
+                </div>
+                <div class="product-content">
+                  <h3 x-text="item.name"></h3>
+                  <div class="product-stars">
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="currentfull"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <use href="img/feather-sprite.svg#star" />
+                    </svg>
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="currentfull"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <use href="img/feather-sprite.svg#star" />
+                    </svg>
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="currentfull"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <use href="img/feather-sprite.svg#star" />
+                    </svg>
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="currentfull"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <use href="img/feather-sprite.svg#star" />
+                    </svg>
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="currentfull"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <use href="img/feather-sprite.svg#star" />
+                    </svg>
+                  </div>
+                  <div class="product-price">
+                    <span x-text="rupiah(item.price)"></span>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
         </div>
       </div>
     </section>
@@ -453,7 +480,11 @@
             </div>
             <div class="info-text">
               <h4>Office Address</h4>
-              <p>Jl. H. Naman No.123, Pondok Kelapa, Jakarta Timur</p>
+              <p>
+                Jl. Sentra Primer Tim. Jl. Baru I No.22B, RT.3/RW.8, Pulo
+                Gebang, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota
+                Jakarta 13950
+              </p>
             </div>
           </div>
           <div class="info-box">
@@ -462,7 +493,7 @@
             </div>
             <div class="info-text">
               <h4>Call Us</h4>
-              <p> +6281218594413</p>
+              <p>+6281218594413</p>
             </div>
           </div>
           <div class="info-box">
@@ -516,6 +547,82 @@
       </div>
     </section>
 
+    <!-- review section star-->
+    <section class="reviews" id="reviews">
+      <h2 class="section-title">Review Pelanggan ISMAIL SERVICE TV</h2>
+      <div class="review-container">
+        <div class="review-card">
+          <div class="review-header">
+            <span class="icon">👤</span>
+            <h4>Andi Pratama</h4>
+          </div>
+          <p>
+            "TV saya mati total, tapi setelah dibawa ke ISMAIL SERVICE, langsung
+            normal lagi. Terima kasih!"
+          </p>
+          <div class="stars">★★★★★</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <span class="icon">👤</span>
+            <h4>Siti Nurhaliza</h4>
+          </div>
+          <p>
+            "Pelayanannya ramah dan cepat. TV saya sekarang jernih kembali!"
+          </p>
+          <div class="stars">★★★★★</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <span class="icon">👤</span>
+            <h4>Fajar Hidayat</h4>
+          </div>
+          <p>
+            "Teknisi sangat profesional. Semua kerusakan dijelaskan dengan
+            detail."
+          </p>
+          <div class="stars">★★★★★</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <span class="icon">👤</span>
+            <h4>Nina Kartika</h4>
+          </div>
+          <p>"Harga servisnya terjangkau dan hasilnya sangat memuaskan."</p>
+          <div class="stars">★★★★★</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <span class="icon">👤</span>
+            <h4>Rendi Setiawan</h4>
+          </div>
+          <p>
+            "Tempat servis terpercaya. Saya sudah dua kali ke sini dan selalu
+            puas."
+          </p>
+          <div class="stars">★★★★★</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <span class="icon">👤</span>
+            <h4>Lina Marlina</h4>
+          </div>
+          <p>
+            "TV LED saya cepat rusak, tapi disini langsung beres dalam 2 hari.
+            Mantap!"
+          </p>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- review section end -->
+
     <!-- Footer Start -->
     <footer class="reparo-footer">
       <div class="footer-container">
@@ -529,7 +636,9 @@
           <ul class="footer-contact">
             <li><i data-feather="phone"></i> +62 812 3456 7890</li>
             <li>
-              <i data-feather="map-pin"></i> Jl. Sentra Primer Tim. Jl. Baru I No.22B, RT.3/RW.8, Pulo Gebang, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13950
+              <i data-feather="map-pin"></i> Jl. Sentra Primer Tim. Jl. Baru I
+              No.22B, RT.3/RW.8, Pulo Gebang, Kec. Cakung, Kota Jakarta Timur,
+              Daerah Khusus Ibukota Jakarta 13950
             </li>
             <li><i data-feather="mail"></i> info@ismailservice.com</li>
           </ul>
@@ -563,10 +672,20 @@
       <!-- Bottom Footer -->
       <div class="footer-bottom">
         <div class="footer-social">
-          <a href="https://www.facebook.com/servicetvlcdledpanggilan?_rdc=1&_rdr#"><i data-feather="facebook"></i></a>
-          <a href="https://x.com/ismailservistv?t=Buu0RvhUguke6aF7ifjW-g&s=09"><i data-feather="twitter"></i></a>
-          <a href="https://www.instagram.com/accounts/login/?next=%2Fismailservice%2F&source=omni_redirect"><i data-feather="instagram"></i></a>
-          <a href="https://youtube.com/@ismailservicetvled?si=72-piGfEQ9NCY0CJ"><i data-feather="youtube"></i></a>
+          <a
+            href="https://www.facebook.com/servicetvlcdledpanggilan?_rdc=1&_rdr#"
+            ><i data-feather="facebook"></i
+          ></a>
+          <a href="https://x.com/ismailservistv?t=Buu0RvhUguke6aF7ifjW-g&s=09"
+            ><i data-feather="twitter"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/accounts/login/?next=%2Fismailservice%2F&source=omni_redirect"
+            ><i data-feather="instagram"></i
+          ></a>
+          <a href="https://youtube.com/@ismailservicetvled?si=72-piGfEQ9NCY0CJ"
+            ><i data-feather="youtube"></i
+          ></a>
         </div>
         <p>
           © Copyright 2025 <span class="brand">ISMAIL SERVICE</span>. All Rights
@@ -576,37 +695,43 @@
     </footer>
     <!-- Footer End -->
 
-     <!-- Modal Box Item Start-->
-        <div class="modal" id="item-detail-modal">
-          <div class="modal-container">
-            <a href="#" class="close-icon"><i data-feather="x"></i></a>
-            <div class="modal-content">
-              <img src="img/remote.jpg" alt="product 1">
-              <div class="product-content">
-                <h3>Product 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, in velit consequatur porro architecto aliquam mollitia aperiam. At quia reiciendis quisquam consequuntur, maxime debitis nemo.</p>
-                  <div class="product-stars">
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-          </div>
-          <div class="product-price">IDR 100k <span>IDR 55K</span></div>
-          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
-              </div>
+    <!-- Modal Box Item Start-->
+    <div class="modal" id="item-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon" @click.prevent="$store.modal.close()"><i data-feather="x"></i></a>
+        <div class="modal-content" x-data>
+          <img src="img/remote.jpg" alt="product 1" />
+          <div class="product-content">
+            <h3 x-text="$store.modal.selectedItem?.name">Product 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, in
+              velit consequatur porro architecto aliquam mollitia aperiam. At
+              quia reiciendis quisquam consequuntur, maxime debitis nemo.
+            </p>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
             </div>
+            <div class="product-price" x-text="rupiah($store.modal.selectedItem?.price)">IDR 100k <span>IDR 55K</span></div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span>add to cart</span></a
+            >
           </div>
         </div>
+      </div>
+    </div>
     <!-- Modal Box Item End-->
     <a
-  href="https://wa.me/6281218594413?text=Nama%20%3A%0AAlamat%3A%0AMerk%20TV%3A%0ANomor%20TV%3A%0AKeluhannya%3A%0AFoto%20TV%3A"
-  class="wa-float"
-  target="_blank"
-  aria-label="Chat via WhatsApp"
->
-  <img src="img/wa.jpg" alt="WhatsApp" />
-</a>
+      href="https://wa.me/6281218594413?text=Nama%20%3A%0AAlamat%3A%0AMerk%20TV%3A%0ANomor%20TV%3A%0AKeluhannya%3A%0AFoto%20TV%3A"
+      class="wa-float"
+      target="_blank"
+      aria-label="Chat via WhatsApp"
+    >
+      <img src="img/wa.jpg" alt="WhatsApp" />
+    </a>
 
     <!-- father icon -->
     <script>
