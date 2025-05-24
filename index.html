@@ -166,10 +166,9 @@
         <div class="about-text">
           <h2>Kami Menyediakan Layanan Perbaikan Berkualitas</h2>
           <p>
-            ISMAIL SERVICE adalah layanan perbaikan komputer dan ponsel
-            terpercaya dengan pengalaman lebih dari 25 tahun. Kami berkomitmen
-            memberikan hasil terbaik dengan harga yang kompetitif dan pelayanan
-            profesional.
+            ISMAIL SERVICE adalah layanan perbaikan TV terpercaya dengan
+            pengalaman lebih dari 25 tahun. Kami berkomitmen memberikan hasil
+            terbaik dengan harga yang kompetitif dan pelayanan profesional.
           </p>
           <div class="features">
             <div class="row1">
@@ -377,7 +376,10 @@
                       <use href="img/feather-sprite.svg#shopping-cart" />
                     </svg>
                   </a>
-                  <a href="#" class="item-detail-button"@click.prevent="$store.modal.open(item)"
+                  <a
+                    href="#"
+                    class="item-detail-button"
+                    @click.prevent="$store.modal.open(item)"
                     ><svg
                       width="24"
                       height="24"
@@ -698,7 +700,9 @@
     <!-- Modal Box Item Start-->
     <div class="modal" id="item-detail-modal">
       <div class="modal-container">
-        <a href="#" class="close-icon" @click.prevent="$store.modal.close()"><i data-feather="x"></i></a>
+        <a href="#" class="close-icon" @click.prevent="$store.modal.close()"
+          ><i data-feather="x"></i
+        ></a>
         <div class="modal-content" x-data>
           <img src="img/remote.jpg" alt="product 1" />
           <div class="product-content">
@@ -715,7 +719,12 @@
               <i data-feather="star"></i>
               <i data-feather="star"></i>
             </div>
-            <div class="product-price" x-text="rupiah($store.modal.selectedItem?.price)">IDR 100k <span>IDR 55K</span></div>
+            <div
+              class="product-price"
+              x-text="rupiah($store.modal.selectedItem?.price)"
+            >
+              IDR 100k <span>IDR 55K</span>
+            </div>
             <a href="#"
               ><i data-feather="shopping-cart"></i> <span>add to cart</span></a
             >
