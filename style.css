@@ -1,18 +1,40 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
+} */
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* PASTIKAN ELEMEN UTAMA FULL WIDTH */
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "poppins",sans-serif;
 }
 
 
+/* 
 body {
   max-width: 100%;
-  font-family: "poppins",sans-serif;
   margin: 0;
-}
+  overflow-x: hidden;
+} */
 .navbar-top {
   width: 100%;
   margin-top: 0.5rem;
@@ -164,11 +186,10 @@ padding: 1rem;
   display: block;
 }
 
-/* Perbaikan bagian ini supaya tidak mengubah background */
 .dropdown:hover .dropbtn {
-  /* Hapus background-color atau set jadi transparent agar background tidak berubah */
+  
   background-color: transparent;
-  color: #ffd700; /* Contoh warna tulisan menyala saat hover */
+  color: #ffd700; 
   transition: color 0.3s ease;
 }
 
@@ -697,6 +718,7 @@ h2 {
   margin: auto;
 }
 
+/* product section start */
 .product {
   background-color: #ffffff;
   padding: 80px 20px;
@@ -756,28 +778,41 @@ h2 {
   transform: translateY(-10px);
 }
 
-.product .product-icons {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-.product .product-icons a:hover {
-  background-color: var(--primary);
-  border: 3px solid #666;
-}
-.product .product-icons a {
-  width: 40px;
-  height: 40px;
-  background-color: #04bffd;
-  color: #060606;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+
+/* Tombol Buy Now */
+.buy-now-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color:#0288d1;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: bold;
   text-decoration: none;
-  border: 1px solid #ccc;
+  margin: 10px 5px 0;
+  transition: background-color 0.3s ease;
 }
+
+.buy-now-button:hover {
+  background-color: #01579b;
+}
+
+/* Tombol Deskripsi */
+.description-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #0288d1;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+.description-button:hover {
+  background-color: #01579b;
+}
+
 
 .product .product-image img {
   height: 10rem;
@@ -788,12 +823,20 @@ h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
+.product .product-content P {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
 
 .product .product-stars {
   margin: 0.5rem 0;
-  color: #ffd700;
+  color:#002c3e;
 }
 
+.product .product-stars .star-full {
+  fill: gold;
+}
 .product .product-price {
   font-weight: bold;
   font-size: 1.2rem;
@@ -803,6 +846,7 @@ h2 {
 .product .services-left img {
   margin-top: 5rem;
 }
+/* product section end */
 
 .contact {
   padding-right: 40px;
@@ -1103,6 +1147,7 @@ h2 {
   margin: 15% auto;
   padding: 1.2rem;
   border: 2px  solid #666;
+  height: 60%;
   width: 80%;
 
 }
@@ -1117,6 +1162,15 @@ h2 {
   flex-wrap: nowrap;
 }
 
+.modal .product-stars {
+  margin: 0.5rem 0;
+  color:#002c3e;
+}
+
+.modal .product-stars .star-full {
+  fill: gold;
+}
+
 .modal-content img{
   height: 15rem;
   margin-right: 2rem;
@@ -1124,7 +1178,8 @@ h2 {
 }
 
 .modal-content p{
-  font-size:1.2rem ;
+  font-size:1rem ;
+  text-align: left;
   line-height: 1.8rem;
   margin-top: 1.2rem;
 }
@@ -1300,7 +1355,24 @@ h2 {
   .modal-content{
     flex-wrap: wrap;
   }
+  
+
+  .dropdown-content a:hover {
+  background-color: #00888b;
+  border-radius: 45%;
 }
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  
+  background-color: transparent;
+  color: #00c9b7; 
+  transition: color 0.3s ease;
+}
+}
+
 
 
 /* Mobile (≤ 600px) */
