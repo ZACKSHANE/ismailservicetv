@@ -1,6 +1,4 @@
-html, body {
-  overflow-x: hidden;
-}
+
 
 * {
   margin: 0;
@@ -417,7 +415,7 @@ h2 {
     padding-top: 10rem;
   }
   .navbar-top {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
   .navbar .navbar-nav {
     position: absolute;
