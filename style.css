@@ -1,7 +1,4 @@
 
-html, body {
-  overflow-x: hidden;
-}
 * {
   margin: 0;
   padding: 0;
@@ -1173,34 +1170,38 @@ h2 {
 /* Responsif */
 /* ===================== RESPONSIVE DESIGN ===================== */
 
-
 /* Laptop/Desktop (≥ 1025px) */
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
-  }
+ }
   .navbar {
     flex-direction: row;
   }
+
   .hero {
     flex-direction: row;
     padding: 4rem;
   }
+
   .hero img {
-    max-width: 100%;
-    height: auto;
+    width: 480px;
   }
+
   .about-container {
     flex-direction: row;
   }
+
   .services-row,
   .product .services-row {
     flex-direction: row;
   }
+
   .services-left,
   .product .services-left {
     flex: 1;
   }
+
   .services-right,
   .product .services-right {
     flex: 2;
@@ -1212,15 +1213,16 @@ h2 {
   html {
     font-size: 62.5%;
   }
+  
   #hamburger-menu {
     display: inline-block;
   }
-  .hero {
+  .hero{
     padding-top: 10rem;
-    flex-direction: column;
-    text-align: center;
+
   }
-  .navbar-top {
+  .navbar-top{
+    
     margin-top: 2rem;
   }
   .navbar .navbar-nav {
@@ -1230,126 +1232,152 @@ h2 {
     background-color: #fff;
     width: 30rem;
     height: 100vh;
-    overflow-x: hidden;
   }
   .navbar .navbar-nav.active {
     right: 0;
   }
-  .navbar .navbar-nav a {
+    .navbar .navbar-nav a {
     color: var(--bg);
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
     font-size: 2rem;
   }
+
   .navbar img {
     width: 8rem;
   }
-  .hero::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    pointer-events: none;
-    background: linear-gradient(1deg, #0b4d54 5%, #fff 50%);
-    bottom: 0;
+  
+  .hero {
+    flex-direction: column;
+    text-align: center;
   }
+  .hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  min-width: 100%;
+  height: 30%;
+  pointer-events: none;
+  background: linear-gradient(1deg, rgb(#0b4d54) 5%, rgba(#fff) 50%);
+  bottom: 0;
+}
+  
   .hero .content h1,
   .hero .content h2 {
     font-size: 2rem;
   }
+  
   .hero img {
     width: 80%;
   }
-  .about img {
+
+  .about img{
     width: 6rem;
   }
+  
   .about-container {
     flex-direction: column;
     padding: 0 1rem;
   }
+  
   .about-text {
     text-align: center;
   }
+  
   .services-row,
   .product .services-row {
     flex-direction: column;
   }
+  
   .services-left,
   .services-right,
   .product .services-left,
   .product .services-right {
     width: 100%;
   }
-  .modal-content {
+  .modal-content{
     flex-wrap: wrap;
   }
-  .footer-container {
+    .footer-container {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 }
+
 
 /* Mobile (≤ 600px) */
 @media (max-width: 398px) {
   html {
     font-size: 55%;
   }
+
   .navbar,
   .navbar .navbar-nav,
   .navbar .navbar-extra {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .navbar img {
     width: 6rem;
     margin: 0;
   }
+
   .hero {
     flex-direction: column;
     text-align: center;
     padding-top: 20rem;
   }
-  .navbar-top {
+
+  .navbar-top{
     margin-top: 7rem;
   }
+
   .hero .content h1,
   .hero .content h2 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
+
   .hero img {
     width: 90%;
     margin: 2rem auto;
   }
+
   .about-container {
     flex-direction: column;
   }
+
   .about-image,
   .about-text {
     width: 100%;
   }
+
   .services-row,
   .product .services-row {
     flex-direction: column;
   }
+
   .services-left,
   .services-right,
   .product .services-left,
   .product .services-right {
     width: 100%;
   }
-  .service-card {
-    margin-left: 0;
+
+  .service-card{
+    margin-left: 6rem
   }
-  .map-container {
-    margin-left: 0;
+  .map-container{
+    margin-left: 3rem;
   }
+
   .highlight-box p {
     font-size: 1.2rem;
   }
-  .footer-container {
+
+    .footer-container {
     grid-template-columns: 1fr;
     gap: 20px;
   }
