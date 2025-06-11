@@ -387,6 +387,27 @@ h2 {
   padding-top: 20px;
   text-align: center;
 }
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px; /* jarak antar icon */
+  margin-top: 20px;
+}
+
+.footer-social a img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.footer-social a img:hover {
+  transform: scale(1.2);
+}
+
 
 .footer-social a {
   margin: 0 10px;
